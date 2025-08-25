@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>PRIMEIROS PASSOS  (AULA 02)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Prof. Victor Valerio" />
+    <script src="index_files/header-attrs/header-attrs.js"></script>
+    <script src="index_files/mark.js/mark.min.js"></script>
+    <link href="index_files/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":true}) })</script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# PRIMEIROS PASSOS </br> (AULA 02)
+]
+.subtitle[
+## R para Ciência de Dados
+]
+.author[
+### Prof. Victor Valerio
+]
+.date[
+### <em>Última Atualização</em>: 25-08-2025
+]
+
+---
+
+
+
+
+
+
+# APRESENTAÇÃO
+----
+
+- [**QUAL O OBJETIVO DA AULA?**](#objetivo_aula)
+
+- [**O QUE É ESSE TAL DE R?**](#sobre_r)
+
+- [**CONHECENDO O RSTUDIO**](#rstudio)
+
+- [**QUAIS OS PRINCIPAIS CONCEITOS DE R?**](#dicionario_r)
+
+---
+class: inverse, center, middle 
+name: objetivo_aula
+
+# QUAL O OBJETIVO DA AULA?
+
+&lt;img src="https://media.giphy.com/media/BpGWitbFZflfSUYuZ9/giphy.gif" alt="Gif da série the office para apresentar o professor" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+&lt;div style="text-align: justify"&gt;
+# OBJETIVO DA AULA
+----
+
+- Esta aula tem por objetivo principal **apresentar a principal ferramenta da 
+disciplina para aplicação dos conceitos a serem trabalhados a frente: a linguagem 
+de programação R**. Assim, vamos discutir:
+
+  - Como funciona a "lógica de programação" da linguagem R;
+  - Como organizar a estação do trabalho.
+
+- De um lado, não é esperado que você tenha qualquer conhecimento prévio. Iniciaremos
+realmente "do zero", isto é, desde a fase de configuração inicial. Por outro lado, 
+é esperado que ao final da aula toda a nossa estação de trabalho esteja pronta para 
+uso e, mais que isso, que não tenhamos medo de usá-la.
+
+
+---
+&lt;div style="text-align: justify"&gt;
+# OBJETIVO DA AULA
+----
+
+- Não vamos esquecer que será a **linguagem de programação R** que nos permitirá 
+realizar **todas as etapas da ciência de dados em um único software**. Assim, o
+início do estudo em R pode parecer complicado, mas o resultado é muito importante
+para a vida profissional e acadêmica. 
+
+&lt;/br&gt;
+- Vamos lembrar do **ciclo da ciência de dados**?
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# OBJETIVO DA AULA
+----
+
+&lt;img src="ciclo.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# OBJETIVO DA AULA
+----
+
+- **Importar**: Trazer os dados de diferentes fontes (planilhas, bancos de dados, 
+APIs, arquivos de texto etc.) para o ambiente R, garantindo que possam ser 
+utilizados nas análises.
+
+- **Organizar**: Estruturar e limpar os dados, ajustando formatos, corrigindo 
+inconsistências e preparando-os para etapas posteriores.
+
+- **Transformar**: Manipular variáveis e criar novas medidas ou indicadores que 
+melhor representem o fenômeno de interesse.
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# OBJETIVO DA AULA
+----
+
+- **Visualizar**: Explorar padrões e tendências por meio de gráficos e tabelas, 
+auxiliando na compreensão inicial e na comunicação das informações.
+
+- **Modelar**: Aplicar métodos estatísticos e de aprendizado de máquina para 
+explicar relações ou prever comportamentos com base nos dados.
+
+- **Comunicar**: Apresentar resultados de forma clara e acessível, utilizando 
+relatórios, painéis ou apresentações que traduzam a análise para diferentes públicos.
+
+
+---
+&lt;div style="text-align: justify"&gt;
+# OBJETIVO DA AULA
+----
+
+- Portanto, o foco da aula de hoje está em programação na linguagem R.
+
+&lt;img src="foco_prog.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, center, middle 
+name: sobre_r
+
+# O QUE É ESSE TAL DE R?
+
+&lt;img src="https://media.giphy.com/media/AEkhbYZRKUaVoEDKph/giphy.gif" alt="Gif da série the office para apresentar o professor" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# O QUE É ESSE TAL DE R?
+----
+
+- O **R é um software livre** (*open source*) que foi criado na década de 1990 por 
+dois estatísticos da Universidade de Auckland (Nova Zelândia), **Ross Ihaka** e 
+**Robert Gentleman** (isso mesmo, o nome do software se refere as iniciais dos
+nomes de seus desenvolvedores).
+
+
+- Ele foi criado por dois estatísticos e para aplicações estatísticas (por isso a
+escolha do mesmo para esta disciplina). Atualmente, a **R Foudation for Statistical 
+Computing** dá suporte ao software e ele ganhou uma ampla gama de aplicações e 
+funcionalidades se tornando um dos programas mais utilizados em todo o mundo!
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# O QUE É ESSE TAL DE R?
+----
+
+- O fato de possuir como mantenedora uma fundação para estatística computacional 
+é uma das principais vantagens de utilização do software R. Assim, pode-se garantir
+que as aplicações são validadas cientificamente. 
+
+&lt;/br&gt;
+
+- Mas afinal de contas, o que é programar na linguagem R?
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# O QUE É ESSE TAL DE R?
+----
+
+Programar na linguagem R significa organizar um **algoritmo que 
+seja interpretável pelo software** (na programação, dizemos: **desenvolver um 
+algoritmo a ser compilado pelo software R**). Neste sentido, é interessante 
+desenvolver um pouco melhor este conceito.
+
+
+- **DEFINIÇÃO DE ALGORITMO**: Conjunto de regras e procedimentos lógicos 
+perfeitamente definidos que levam à solução de um problema em um número finito 
+de etapas.
+
+- **COMPILAR EM R**: Tradução (ou **interpretação**) de um determinado código 
+escrito (**algoritmo**) em linguagem de máquina para a execução das tarefas 
+definidas.
+
+---
+&lt;div style="text-align: justify"&gt;
+# O QUE É ESSE TAL DE R?
+----
+
+- Como visto, um algoritmo é uma sequência de etapas escritas em um código e com 
+alguma finalidade específica. Mas essa singela definição pode deixar passar um 
+fato importante: **O código pode ser muito grande, com muitos "atributos"!**
+
+&lt;/br&gt;
+- Assim, o seu desenvolvimento pode se tornar complexo em alguns casos e, mais que 
+isso, o seu entedimento no futuro (quando for retomado por você ou mesmo por 
+outros pesquisadores) também pode ser complicado.
+
+---
+&lt;div style="text-align: justify"&gt;
+# O QUE É ESSE TAL DE R?
+----
+
+- Para nos ajudar nessa tarefa de organizar os algoritmos desenvolvidos, ou em 
+desenvolvimento, utilizamos um outro software denominado: **RStudio**. 
+
+&lt;/br&gt;
+
+- Vale ressaltar, isso significa que **continuamos programando em linguagem R**, 
+mas com a ajuda de um organizador de algoritmo chamado **RStudio** (em programação, 
+esse "organizador" é chamado de **IDE -  Integrated Development Enviroment**).
+
+---
+# O QUE É ESSE TAL DE R?
+----
+
+&lt;img src="icones.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, center, middle 
+name: rstudio
+
+# CONHECENDO O RSTUDIO
+
+&lt;img src="https://media.giphy.com/media/myeDS6IoQrnyqus91Q/giphy.gif" alt="Gif da série the office para apresentar o professor" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+&lt;div style="text-align: justify"&gt;
+
+## CONHECENDO O RSTUDIO
+----
+
+- O **RStudio** possui uma interface dividida em quatro quadrantes, cada um 
+desempenhando um papel específico:
+
+  - **Script** (Quadrante Superior Esquerdo);
+  - **Console** (Quadrante Inferior Esquerdo);
+  - **Ambiente** (Quadrante Superior Direito);
+  - **Arquivos/Gráficos/Pacotes/Ajuda** (Quadrante Inferior Direito).
+  
+- Observação: Para "abrir" o quarto quadrante clique no ícone **"new file"** e selecione a 
+opção **"R Script"**. Ou utilize o atalho **(Ctrl + Shift + N)**.
+---
+&lt;div style="text-align: justify"&gt;
+
+# CONHECENDO O RSTUDIO
+----
+
+- **Script** (Quadrante Superior Esquerdo): Neste quadrante, você pode criar, 
+editar, executar e salvar o algoritmo desenvolvido na linguagem R. 
+
+- O **Script** permite que você escreva um conjunto de instruções R de forma 
+sequencial (**algoritmo**) e, em seguida, execute todas as instruções de uma vez. 
+Isso é útil para criar fluxos de trabalho complexos ou análises repetíveis.
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# CONHECENDO O RSTUDIO
+----
+
+- **Console** (Quadrante Inferior Esquerdo): O console é onde você interage 
+diretamente com o R. Você pode digitar comandos R diretamente no console e ver 
+os resultados imediatamente. É um ótimo lugar para testar pequenos trechos de 
+código, experimentar funções e verificar resultados.
+
+- De fato, a integração entre IDE RStudio e o software R ocorre no console. 
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# CONHECENDO O RSTUDIO
+----
+
+- **Environment** (Quadrante Superior Direito): Este quadrante exibe informações 
+sobre os objetos que você criou e suas propriedades. 
+
+- Quando você define variáveis ou carrega dados no R, esses objetos são listados 
+no ambiente. Isso permite que você acompanhe as variáveis e objetos que estão 
+disponíveis para uso em sua sessão R.
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# CONHECENDO O RSTUDIO
+----
+
+- **Arquivos/Gráficos/Pacotes/Ajuda** (Quadrante Inferior Direito): Neste painel, 
+você pode explorar e navegar pelos arquivos e pastas do sistema de arquivos do 
+seu computador. Ver os gráficos que são gerados a partir dos seus comandos de 
+visualização. Ver informações sobre os pacotes (bibliotecas) que estão instalados 
+no seu ambiente R. Acessar a documentação de ajuda para funções e pacotes do R.
+
+
+---
+class: inverse, center, middle 
+name: dicionario_r
+
+# QUAIS OS PRINCIPAIS CONCEITOS DE R?
+
+&lt;img src="https://media.giphy.com/media/9psHrHyIXciY6lCz8B/giphy.gif" alt="Gif da série the office para apresentar o professor" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# PRINCIPAIS CONCEITOS DE R
+
+- **FUNÇÃO:** Um código que determina a **realização de uma tarefa específica**. Em
+geral, as funções aceitam **entradas** (**argumentos** da função) para produzirem uma 
+determinada **saída**. 
+
+  - **Funções matemáticas**: soma **"+"**, diferença **"-"**, divisão **"/"**, 
+  multiplicação **"*"**);
+  
+  - **Funções estatísticas**;
+  
+  - **Funções de manipulação de dados**.
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# PRINCIPAIS CONCEITOS DE R
+
+- **OBJETO:** Uma estrutura que armazena dados (número, conjunto de números, 
+imagens, texto, etc.). Para criar um objeto no R (ou seja, armazenar determinada 
+informação em um objeto) utiliza-se o sinal de atribuição "**&lt;-**" (como se fosse 
+uma seta que mostra o dado que está sendo armazenado ao objeto). Os principais
+tipos de objetos são:
+
+  - **Vetores**: Um vetor é uma sequência de elementos do mesmo tipo. Pode ser 
+  um vetor numérico, de caracteres, lógico, entre outros.
+  
+  - **Matrizes**: Matrizes são vetores bidimensionais com elementos do mesmo tipo;
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# PRINCIPAIS CONCEITOS DE R
+
+- **OBJETO:** Uma estrutura que armazena dados (número, conjunto de números, 
+imagens, texto, etc.). Para criar um objeto no R (ou seja, armazenar determinada 
+informação em um objeto) utiliza-se o sinal de atribuição "**&lt;-**" (como se fosse 
+uma seta que mostra o dado que está sendo armazenado ao objeto). Os principais
+tipos de objetos são:
+    
+  - **Data Frame**: estruturas semelhantes a tabelas, onde as colunas podem ser 
+  de diferentes tipos. Eles são usados para armazenar conjuntos de dados tabulares;
+  
+  - **Lista**: coleções ordenadas de objetos, que podem ser de tipos diferentes.
+
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# PRINCIPAIS CONCEITOS DE R
+
+- **PACOTES:** Conjunto de funções (ou conjuntos de dados) com documentação 
+relacionada e que se destinam a realizar tarefas específicas.
+
+- Existem milhares de pacotes disponíveis na comunidade R que cobrem uma ampla 
+gama de tarefas, desde análise de dados até criação de gráficos. Para usar as 
+funções de um pacote, você precisa instalá-lo e carregá-lo em sua sessão R.
+
+---
+# PRINCIPAIS CONCEITOS DE R
+
+&lt;img src="pacote_funcao.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+&lt;div style="text-align: justify"&gt;
+
+# PRINCIPAIS CONCEITOS DE R
+
+A linguagem R é principalmente uma **linguagem de programação orientada a funções**. 
+Isto é, o R permite a criação e manipulação de objetos (dados armazenados), por
+meio da execução de funções.
+
+Esta é uma das grandes diferenças entre o R e o python (linguagem orientada à 
+objeto).
+
+
+---
+## VOLTANDO, COMO INSTALAR E USAR PACOTES?
+
+
+&lt;img src="console_script.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: inverse, center, middle
+
+
+&lt;img src="https://media.giphy.com/media/n4oKYFlAcv2AU/giphy.gif" alt="Gif para agradecer pela atenção e o tema é da série the office" width="80%" style="display: block; margin: auto;" /&gt;
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "slideNumberFormat": "%current%",
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "ratio": "16:9",
+  "countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
