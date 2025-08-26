@@ -1,56 +1,43 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>PRIMEIROS PASSOS  (AULA 02)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Prof. Victor Valerio" />
+    <script src="index_files/header-attrs/header-attrs.js"></script>
+    <script src="index_files/fabric/fabric.min.js"></script>
+    <link href="index_files/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="index_files/mark.js/mark.min.js"></script>
+    <link href="index_files/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":true}) })</script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# PRIMEIROS PASSOS </br> (AULA 02)
+]
+.subtitle[
+## R para Ciência de Dados
+]
+.author[
+### Prof. Victor Valerio
+]
+.date[
+### <em>Última Atualização</em>: 25-08-2025
+]
+
 ---
-title: 'PRIMEIROS PASSOS </br> (AULA 02)'
-subtitle: 'R para Ciência de Dados' 
-author: 
-  - 'Prof. Victor Valerio'
-date: '_Última Atualização_: `r format(Sys.Date(), "%d-%m-%Y")`'
-output:
-  xaringan::moon_reader:
-    css: xaringan-themer.css
-    nature:
-      slideNumberFormat: "%current%"
-      highlightStyle: github
-      highlightLines: true
-      ratio: 16:9
-      countIncrementalSlides: true
----
-
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(
-  fig.width=9, 
-  fig.height=3.5, 
-  fig.retina=3,
-  out.width = "100%",
-  cache = FALSE,
-  echo = FALSE,
-  message = FALSE, 
-  warning = FALSE,
-  hiline = TRUE,
-  fig.align = 'center'
-)
 
 
-```
 
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-library(xaringanExtra)
 
-style_duo_accent(
-  primary_color = "#2F4F4F",
-  secondary_color = "#EAD7B7",
-  inverse_header_color = "#2B2B2B",
-  text_font_size = '30px',
-  header_h1_font_size = '3rem',
-  header_h2_font_size = '2rem',
-  header_h3_font_size = '1.5rem'
-)
 
-# RECURSOS DO SLIDE: ----
-use_scribble()
-use_search(show_icon = TRUE)
-```
 
 # APRESENTAÇÃO
 ----
@@ -69,12 +56,10 @@ name: objetivo_aula
 
 # QUAL O OBJETIVO DA AULA?
 
-```{r, echo = F, fig.align = 'center', fig.alt= 'Gif da série the office para apresentar o professor', out.width = '50%'}
-knitr::include_graphics('https://media.giphy.com/media/BpGWitbFZflfSUYuZ9/giphy.gif')
-```
+&lt;img src="https://media.giphy.com/media/BpGWitbFZflfSUYuZ9/giphy.gif" alt="Gif da série the office para apresentar o professor" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 # OBJETIVO DA AULA
 ----
 
@@ -92,7 +77,7 @@ uso e, mais que isso, que não tenhamos medo de usá-la.
 
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 # OBJETIVO DA AULA
 ----
 
@@ -101,21 +86,19 @@ realizar **todas as etapas da ciência de dados em um único software**. Assim, 
 início do estudo em R pode parecer complicado, mas o resultado é muito importante
 para a vida profissional e acadêmica. 
 
-</br>
+&lt;/br&gt;
 - Vamos lembrar do **ciclo da ciência de dados**?
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # OBJETIVO DA AULA
 ----
 
-```{r, echo = F, fig.align = 'center', out.width = '75%'}
-knitr::include_graphics('ciclo.png')
-```
+&lt;img src="ciclo.png" width="75%" style="display: block; margin: auto;" /&gt;
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # OBJETIVO DA AULA
 ----
@@ -131,7 +114,7 @@ inconsistências e preparando-os para etapas posteriores.
 melhor representem o fenômeno de interesse.
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # OBJETIVO DA AULA
 ----
@@ -147,15 +130,13 @@ relatórios, painéis ou apresentações que traduzam a análise para diferentes
 
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 # OBJETIVO DA AULA
 ----
 
 - Portanto, o foco da aula de hoje está em programação na linguagem R.
 
-```{r, echo = F, fig.align = 'center', out.width = '50%'}
-knitr::include_graphics('foco_prog.png')
-```
+&lt;img src="foco_prog.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 class: inverse, center, middle 
@@ -163,12 +144,10 @@ name: sobre_r
 
 # O QUE É ESSE TAL DE R?
 
-```{r, echo = F, fig.align = 'center', fig.alt= 'Gif da série the office para apresentar o professor', out.width = '50%'}
-knitr::include_graphics('https://media.giphy.com/media/AEkhbYZRKUaVoEDKph/giphy.gif')
-```
+&lt;img src="https://media.giphy.com/media/AEkhbYZRKUaVoEDKph/giphy.gif" alt="Gif da série the office para apresentar o professor" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # O QUE É ESSE TAL DE R?
 ----
@@ -185,7 +164,7 @@ Computing** dá suporte ao software e ele ganhou uma ampla gama de aplicações 
 funcionalidades se tornando um dos programas mais utilizados em todo o mundo!
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # O QUE É ESSE TAL DE R?
 ----
@@ -194,12 +173,12 @@ funcionalidades se tornando um dos programas mais utilizados em todo o mundo!
 é uma das principais vantagens de utilização do software R. Assim, pode-se garantir
 que as aplicações são validadas cientificamente. 
 
-</br>
+&lt;/br&gt;
 
 - Mas afinal de contas, o que é programar na linguagem R?
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # O QUE É ESSE TAL DE R?
 ----
@@ -219,7 +198,7 @@ escrito (**algoritmo**) em linguagem de máquina para a execução das tarefas
 definidas.
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 # O QUE É ESSE TAL DE R?
 ----
 
@@ -227,20 +206,20 @@ definidas.
 alguma finalidade específica. Mas essa singela definição pode deixar passar um 
 fato importante: **O código pode ser muito grande, com muitos "atributos"!**
 
-</br>
+&lt;/br&gt;
 - Assim, o seu desenvolvimento pode se tornar complexo em alguns casos e, mais que 
 isso, o seu entedimento no futuro (quando for retomado por você ou mesmo por 
 outros pesquisadores) também pode ser complicado.
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 # O QUE É ESSE TAL DE R?
 ----
 
 - Para nos ajudar nessa tarefa de organizar os algoritmos desenvolvidos, ou em 
 desenvolvimento, utilizamos um outro software denominado: **RStudio**. 
 
-</br>
+&lt;/br&gt;
 
 - Vale ressaltar, isso significa que **continuamos programando em linguagem R**, 
 mas com a ajuda de um organizador de algoritmo chamado **RStudio** (em programação, 
@@ -250,9 +229,7 @@ esse "organizador" é chamado de **IDE -  Integrated Development Enviroment**).
 # O QUE É ESSE TAL DE R?
 ----
 
-```{r, echo = F, fig.align = 'center', out.width = '75%'}
-knitr::include_graphics('icones.png')
-```
+&lt;img src="icones.png" width="75%" style="display: block; margin: auto;" /&gt;
 
 ---
 class: inverse, center, middle 
@@ -260,12 +237,10 @@ name: rstudio
 
 # CONHECENDO O RSTUDIO
 
-```{r, echo = F, fig.align = 'center', fig.alt= 'Gif da série the office para apresentar o professor', out.width = '50%'}
-knitr::include_graphics('https://media.giphy.com/media/myeDS6IoQrnyqus91Q/giphy.gif')
-```
+&lt;img src="https://media.giphy.com/media/myeDS6IoQrnyqus91Q/giphy.gif" alt="Gif da série the office para apresentar o professor" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 ## CONHECENDO O RSTUDIO
 ----
@@ -281,7 +256,7 @@ desempenhando um papel específico:
 - Observação: Para "abrir" o quarto quadrante clique no ícone **"new file"** e selecione a 
 opção **"R Script"**. Ou utilize o atalho **(Ctrl + Shift + N)**.
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # CONHECENDO O RSTUDIO
 ----
@@ -294,7 +269,7 @@ sequencial (**algoritmo**) e, em seguida, execute todas as instruções de uma v
 Isso é útil para criar fluxos de trabalho complexos ou análises repetíveis.
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # CONHECENDO O RSTUDIO
 ----
@@ -307,7 +282,7 @@ código, experimentar funções e verificar resultados.
 - De fato, a integração entre IDE RStudio e o software R ocorre no console. 
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # CONHECENDO O RSTUDIO
 ----
@@ -320,7 +295,7 @@ no ambiente. Isso permite que você acompanhe as variáveis e objetos que estão
 disponíveis para uso em sua sessão R.
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # CONHECENDO O RSTUDIO
 ----
@@ -338,12 +313,10 @@ name: dicionario_r
 
 # QUAIS OS PRINCIPAIS CONCEITOS DE R?
 
-```{r, echo = F, fig.align = 'center', fig.alt= 'Gif da série the office para apresentar o professor', out.width = '50%'}
-knitr::include_graphics('https://media.giphy.com/media/9psHrHyIXciY6lCz8B/giphy.gif')
-```
+&lt;img src="https://media.giphy.com/media/9psHrHyIXciY6lCz8B/giphy.gif" alt="Gif da série the office para apresentar o professor" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # PRINCIPAIS CONCEITOS DE R
 
@@ -359,13 +332,13 @@ determinada **saída**.
   - **Funções estatísticas**.
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # PRINCIPAIS CONCEITOS DE R
 
 - **OBJETO:** Uma estrutura que armazena dados (número, conjunto de números, 
 imagens, texto, etc.). Para criar um objeto no R (ou seja, armazenar determinada 
-informação em um objeto) utiliza-se o sinal de atribuição "**<-**" (como se fosse 
+informação em um objeto) utiliza-se o sinal de atribuição "**&lt;-**" (como se fosse 
 uma seta que mostra o dado que está sendo armazenado ao objeto). Os principais
 tipos de objetos são:
 
@@ -375,13 +348,13 @@ tipos de objetos são:
   - **Matrizes**: Matrizes são vetores bidimensionais com elementos do mesmo tipo;
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # PRINCIPAIS CONCEITOS DE R
 
 - **OBJETO:** Uma estrutura que armazena dados (número, conjunto de números, 
 imagens, texto, etc.). Para criar um objeto no R (ou seja, armazenar determinada 
-informação em um objeto) utiliza-se o sinal de atribuição "**<-**" (como se fosse 
+informação em um objeto) utiliza-se o sinal de atribuição "**&lt;-**" (como se fosse 
 uma seta que mostra o dado que está sendo armazenado ao objeto). Os principais
 tipos de objetos são:
     
@@ -392,7 +365,7 @@ tipos de objetos são:
 
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # PRINCIPAIS CONCEITOS DE R
 
@@ -406,12 +379,10 @@ funções de um pacote, você precisa instalá-lo e carregá-lo em sua sessão R
 ---
 # PRINCIPAIS CONCEITOS DE R
 
-```{r, echo = F, fig.align = 'center', out.width = '75%'}
-knitr::include_graphics('pacote_funcao.png')
-```
+&lt;img src="pacote_funcao.png" width="75%" style="display: block; margin: auto;" /&gt;
 
 ---
-<div style="text-align: justify">
+&lt;div style="text-align: justify"&gt;
 
 # PRINCIPAIS CONCEITOS DE R
 
@@ -427,18 +398,150 @@ linguagem orientada à objeto).
 ## VOLTANDO, COMO INSTALAR E USAR PACOTES?
 
 
-```{r, echo = F, fig.align = 'center', out.width = '75%'}
-knitr::include_graphics('console_script.png')
-```
+&lt;img src="console_script.png" width="75%" style="display: block; margin: auto;" /&gt;
 
 
 ---
 class: inverse, center, middle
 
 
-```{r, echo = F, fig.align = 'center', fig.alt= 'Gif para agradecer pela atenção e o tema é da série the office', out.width = '80%'}
+&lt;img src="https://media.giphy.com/media/n4oKYFlAcv2AU/giphy.gif" alt="Gif para agradecer pela atenção e o tema é da série the office" width="80%" style="display: block; margin: auto;" /&gt;
 
-knitr::include_graphics('https://media.giphy.com/media/n4oKYFlAcv2AU/giphy.gif')
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "slideNumberFormat": "%current%",
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "ratio": "16:9",
+  "countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
 
-```
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
 
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
