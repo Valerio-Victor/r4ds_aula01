@@ -111,7 +111,7 @@ para a vida profissional e acadêmica.
 ----
 
 ```{r, echo = F, fig.align = 'center', out.width = '75%'}
-knitr::include_graphics('ciclo.png')
+knitr::include_graphics('ciclo.PNG')
 ```
 
 ---
