@@ -154,7 +154,7 @@ relatórios, painéis ou apresentações que traduzam a análise para diferentes
 - Portanto, o foco da aula de hoje está em programação na linguagem R.
 
 ```{r, echo = F, fig.align = 'center', out.width = '50%'}
-knitr::include_graphics('foco_prog.png')
+knitr::include_graphics('foco_prog.PNG')
 ```
 
 ---
@@ -251,7 +251,7 @@ esse "organizador" é chamado de **IDE -  Integrated Development Enviroment**).
 ----
 
 ```{r, echo = F, fig.align = 'center', out.width = '75%'}
-knitr::include_graphics('icones.png')
+knitr::include_graphics('icones.PNG')
 ```
 
 ---
@@ -407,7 +407,7 @@ funções de um pacote, você precisa instalá-lo e carregá-lo em sua sessão R
 # PRINCIPAIS CONCEITOS DE R
 
 ```{r, echo = F, fig.align = 'center', out.width = '75%'}
-knitr::include_graphics('pacote_funcao.png')
+knitr::include_graphics('pacote_funcao.PNG')
 ```
 
 ---
@@ -428,7 +428,7 @@ linguagem orientada à objeto).
 
 
 ```{r, echo = F, fig.align = 'center', out.width = '75%'}
-knitr::include_graphics('console_script.png')
+knitr::include_graphics('console_script.PNG')
 ```
 
 
