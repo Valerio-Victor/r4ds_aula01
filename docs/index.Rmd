@@ -428,7 +428,7 @@ linguagem orientada à objeto).
 
 
 ```{r, echo = F, fig.align = 'center', out.width = '75%'}
-knitr::include_graphics('console_script.PNG')
+knitr::include_graphics('console_script.png')
 ```
 
 
