@@ -354,9 +354,9 @@ determinada **saída**.
   - **Funções matemáticas**: soma **"+"**, diferença **"-"**, divisão **"/"**, 
   multiplicação **"*"**);
   
-  - **Funções estatísticas**;
+  - **Funções de manipulação de dados**;
   
-  - **Funções de manipulação de dados**.
+  - **Funções estatísticas**.
 
 ---
 <div style="text-align: justify">
