@@ -1,4 +1,4 @@
-## FUNÇÕES MATEMÁTICAS
+# FUNÇÕES MATEMÁTICAS
 
 # Função de Adição
 1+1 # "+"
@@ -42,13 +42,15 @@ texto <- "O palmeiras possui mundial"
 adicao <- 1+1
 adicao_2 <- adicao + 1
 
-# 
+# Sobrescrever o objeto
 adicao <- 1+1
+adicao
 adicao <- 1+5
+adicao
 
 # Objeto resultado de uma função
 media <- mean(c(5,10,15))
-
+media
 
 
 
